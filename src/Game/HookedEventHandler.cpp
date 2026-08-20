@@ -20,7 +20,7 @@ namespace Event
 
 		void Install()
 		{
-			REL::Relocation<std::uintptr_t> bookMenu{ RELOCATION_ID(50122, 51053), OFFSET_3(0x22D, 0x231, 0x295) };
+			REL::Relocation<std::uintptr_t> bookMenu{ RELOCATION_ID(50122, 51053), OFFSET_3(0x22D, 0x268, 0x295) };
 			stl::write_thunk_call<Read>(bookMenu.address());
 
 			logger::info("Hooked Book Read"sv);
@@ -186,7 +186,7 @@ namespace Event
 
 			namespace Static
 			{
-				REL::Relocation<std::uintptr_t> target{ RELOCATION_ID(37674, 38628), OFFSET(0x6C7, 0x785) };
+				REL::Relocation<std::uintptr_t> target{ RELOCATION_ID(37674, 38628), OFFSET(0x6C7, 0x79D) };
 
 				struct SendHitEvent
 				{
